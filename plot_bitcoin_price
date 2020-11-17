@@ -1,0 +1,9 @@
+pip install fredapi
+
+import pandas as pd
+from fredapi import Fred
+
+fred = Fred(api_key='<place your FRED api key here>')
+
+CBBTCUSD = fred.get_series('CBBTCUSD')
+CBBTCUSD.plot()
